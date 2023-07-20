@@ -530,7 +530,6 @@ logging.level.com.nowcoder.community = debug
 
 开发流程：1次请求的执行过程，分步实现
 
-![开发流程](E:\project_牛客Java项目\第1章 初识Spring Boot，开发社区首页\开发流程.PNG)
 
 请求会提交给视图层Controller -> 访问Service业务层 -> 访问数据库 数据访问组件Dao
 开发流程DAO、Service、Controller
@@ -772,7 +771,7 @@ li标签首页需要th:href="@{${page.path}(current=1)末页需要current={page.
 
 5服务端响应 **500**：服务器遇到了不知道如何处理的情况
 
-### 服务端断电调试技巧
+### 服务端断点调试技巧
 
 在对应的地方加断点  右键debug
 
@@ -786,7 +785,7 @@ li标签首页需要th:href="@{${page.path}(current=1)末页需要current={page.
 
 断点整体管理左下侧状态按钮方块下面药丸按钮可以统一取消断点
 
-## 客户端断点调试技巧
+### 客户端断点调试技巧
 
 浏览器上
 
@@ -806,7 +805,7 @@ console看输出结果 sources可以看对应的代码
 
 默认日志工具logback 对应网址：https://logback.qos.ch
 
-documentation里面的manual手册 级别：debug、info、warn、error
+documentation里面的manual手册 级别：trace、debug、info、warn、error
 
 新建测试类-LoggerTest 引入注解
 
@@ -828,11 +827,13 @@ public void testLogger(){
 
 执行测试方法
 
-将日志存储在简单的文件里：在properties配置文件里 声明：
+对于springboot项目设置日志级别：
+
+（1）将日志存储在简单的文件里：在properties配置文件里 声明：
 
 #logging.file=e:/project_work/data/nowcoder/community.log
 
-复杂方法：准备好的logback-springbot.xml文件 放在resources文件下，修改xml文件
+（2）复杂方法：准备好的logback-springbot.xml文件 放在resources文件下，修改xml文件
 
 1、修改文件地址
 
@@ -842,7 +843,7 @@ public void testLogger(){
 
 4、保存的是debbug级别以上的log、info级别
 
-## 版本控制
+## 七、版本控制
 
 ### 认识Git
 
