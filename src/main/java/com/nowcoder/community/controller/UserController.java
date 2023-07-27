@@ -89,7 +89,7 @@ public class UserController {
                 FileInputStream fis = new FileInputStream(fileName);
                 OutputStream os = response.getOutputStream();
                 ) {
-                       byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[1024];
             int b = 0;
             while ( (b = fis.read(buffer)) != -1){
                 os.write(buffer,0,b);
