@@ -13,5 +13,6 @@ public interface DiscussPostMapper {
     int selectDiscussPostRows(@Param("userId") int userId); //查询表的行数 注解起别名字
 
     int insertDiscussPost(DiscussPost discussPost);
+    DiscussPost selectDiscussPostById(int id);
 
 }
